@@ -2,10 +2,11 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:stock_final/home_stock.dart';
-import 'package:stock_final/news.dart';
+import 'package:stock_final/view/convert.dart';
+import 'package:stock_final/view/home_news.dart';
+import 'package:stock_final/view/home_stock.dart';
 
-import 'convert.dart';
+//import 'convert.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -71,11 +72,7 @@ class _HomePageState extends State<HomePage>
         ),
         body: TabBarView(
           controller: _tabController,
-          children: <Widget>[
-            homeStock(),
-            convertMoney(),
-            news()
-          ],
+          children: <Widget>[homeStock(), convertMoney(), homeNews()],
         ),
       ),
     );

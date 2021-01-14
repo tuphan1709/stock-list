@@ -1,5 +1,5 @@
+import 'package:country_code_picker/country_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:stock_final/home_pages.dart';
 import 'package:stock_final/home_pages.dart';
 
 void main() {
@@ -7,11 +7,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      supportedLocales: [
+        Locale('en', 'US'),
+      ],
+      localizationsDelegates: [
+        CountryLocalizations.delegate,
+      ],
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
